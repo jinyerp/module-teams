@@ -41,6 +41,12 @@ return new class extends Migration
             $table->string('auth')->nullable();
             $table->unsignedBigInteger('auth_id')->nullable(); // 승인자
 
+            // 외부 프로젝트 연결 join
+            $table->string('project')->nullable();
+            $table->unsignedBigInteger('project_id')->nullable();
+
+            $table->string('nested')->nullable();
+            $table->unsignedBigInteger('nested_id')->nullable();
 
             // 담당자
             $table->string('owner')->nullable(); // 담당자
@@ -59,6 +65,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('team_projects');
+        Schema::dropIfExists('teams');
     }
 };

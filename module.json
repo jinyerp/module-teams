@@ -1,7 +1,7 @@
 {
     "name": "Teams",
     "alias": "teams",
-    "description": "",
+    "description": "팀 관리를 위한 모듈입니다.",
     "keywords": [],
     "priority": 0,
     "providers": [

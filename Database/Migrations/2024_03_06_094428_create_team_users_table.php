@@ -50,6 +50,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('team_project_users');
+        Schema::dropIfExists('team_users');
     }
 };

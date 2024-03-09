@@ -67,11 +67,14 @@ class TeamSidebar extends Component
                     'created_at' => $todayTime,
                     'updated_at' => $todayTime,
                     'n_id' => $project_id,
-                    'm_id' => $user_id
+                    'm_id' => $user_id,
+                    'user_id' => $user_id
                 ]);
         }
 
-
         $this->inlineAdd = false;
+
+        // Livewire를 갱신을 호출합니다.
+        $this->emit('refesh');
     }
 }

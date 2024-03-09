@@ -71,4 +71,12 @@ class TeamList extends Component
 
         $this->inlineAdd = false;
     }
+
+    protected $listeners = [
+        'refesh'
+    ];
+
+    public function refesh()
+    {
+    }
 }
