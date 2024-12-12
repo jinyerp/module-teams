@@ -1,6 +1,6 @@
 {
     "name": "jiny/module-teams",
-    "description":"account for JinyShop",
+    "description":"Team Module",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -18,7 +18,8 @@
             "Jiny\\Modules\\Teams\\":"/"
         },
         "files" : [
-            "Helpers/Helper.php"
+            "Helpers/Helper.php",
+            "Helpers/Admin.php"
         ]
     },
     "autoload-dev": {
