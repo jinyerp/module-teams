@@ -41,16 +41,6 @@ class TeamsServiceProvider extends ServiceProvider
     {
         $this->app->register(RouteServiceProvider::class);
 
-        Livewire::component('TeamSidebar', \Modules\Teams\Http\Livewire\TeamSidebar::class);
-        Livewire::component('MyTeamProjectLists', \Modules\Teams\Http\Livewire\MyTeamProjectLists::class);
-
-        Livewire::component('ProjectDetail', \Modules\Teams\Http\Livewire\ProjectDetail::class);
-
-        // 프로젝트에 참여하는 구성원 관리
-        Livewire::component('TeamUsers', \Modules\Teams\Http\Livewire\TeamUsers::class);
-
-        Livewire::component('TeamInvite', \Modules\Teams\Http\Livewire\TeamInvite::class);
-        Livewire::component('TeamList', \Modules\Teams\Http\Livewire\TeamList::class);
     }
 
     /**

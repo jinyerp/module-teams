@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Teams\Http\Livewire;
+namespace Jiny\Erp\Teams\Http\Livewire;
 
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Routing\Route;
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 // 테이블 필드를 리스트 목록으로 출력합니다.
 class TeamSidebar extends Component
 {
-    private $tablename = "teams";
+    private $tablename = "erp_teams";
     public $forms=[];
     public $inlineAdd = false;
 
@@ -23,7 +23,7 @@ class TeamSidebar extends Component
 
         $rows = DB::table($this->tablename)->where('user_id', $id)->get();
 
-        return view("teams::livewire.sidebar",[
+        return view("jiny-erp-teams::livewire.sidebar",[
             'rows' => $rows
         ]);
     }
@@ -62,7 +62,7 @@ class TeamSidebar extends Component
 
         // 사용자 등록
         if($project_id) {
-            DB::table("team_users")
+            DB::table("erp_team_users")
                 ->insertGetId([
                     'created_at' => $todayTime,
                     'updated_at' => $todayTime,

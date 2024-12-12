@@ -1,23 +1,37 @@
 {
-    "name": "jiny/teams",
-    "description": "",
+    "name": "jiny/erp-teams",
+    "description":"account for JinyShop",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "hojinlee",
             "email": "infohojin@gmail.com"
         }
     ],
-    "extra": {
-        "laravel": {
-            "providers": [],
-            "aliases": {
-
-            }
-        }
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2"
     },
     "autoload": {
         "psr-4": {
-            "Modules\\Teams\\": ""
+            "Jiny\\Erp\\Teams\\":"/"
+        },
+        "files" : [
+            "Helpers/Helper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jiny\\Erp\\Teams\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jiny\\Erp\\Teams\\JinyErpTeamServiceProvider"
+            ]
         }
     }
+
 }

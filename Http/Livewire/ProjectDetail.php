@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Teams\Http\Livewire;
+namespace Jiny\Erp\Teams\Http\Livewire;
 
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Routing\Route;
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 // 테이블 필드를 리스트 목록으로 출력합니다.
 class ProjectDetail extends Component
 {
-    private $tablename = "teams";
+    private $tablename = "erp_teams";
 
     public $project_id;
     public $forms=[];
@@ -24,7 +24,7 @@ class ProjectDetail extends Component
     {
         $row = DB::table($this->tablename)->where('id', $this->project_id)->first();
 
-        return view("teams::livewire.detail",[
+        return view("jiny-erp-teams::livewire.detail",[
             'row' => $row
         ]);
     }

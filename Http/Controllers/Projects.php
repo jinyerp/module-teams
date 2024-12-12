@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Teams\Http\Controllers;
+namespace Jiny\Erp\Teams\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;

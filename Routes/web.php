@@ -14,11 +14,11 @@ use Illuminate\Http\Request;
 */
 Route::middleware(['web','auth:sanctum', 'verified'])
 ->prefix('teams')->group(function() {
-    Route::get('/', [\Modules\Teams\Http\Controllers\Teams::class, 'index']);
-    Route::get('/all', [\Modules\Teams\Http\Controllers\TeamsAll::class, 'index']);
+    Route::get('/', [\Jiny\Erp\Teams\Http\Controllers\Teams::class, 'index']);
+    Route::get('/all', [\Jiny\Erp\Teams\Http\Controllers\TeamsAll::class, 'index']);
 
     Route::get('/users/{id}', [
-        \Modules\Teams\Http\Controllers\TeamUsers::class,
+        \Jiny\Erp\Teams\Http\Controllers\TeamUsers::class,
         'index'
     ]);
 
@@ -28,8 +28,8 @@ Route::middleware(['web','auth:sanctum', 'verified'])
 
 Route::middleware(['web','auth:sanctum', 'verified'])
 ->prefix('team')->group(function() {
-    Route::get('/projects', [\Modules\Teams\Http\Controllers\Projects::class, 'index']);
-    Route::get('/myprojects', [\Modules\Teams\Http\Controllers\MyProjects::class, 'index']);
+    Route::get('/projects', [\Jiny\Erp\Teams\Http\Controllers\Projects::class, 'index']);
+    Route::get('/myprojects', [\Jiny\Erp\Teams\Http\Controllers\MyProjects::class, 'index']);
 
 
 });

@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Teams\Http\Controllers;
+namespace Jiny\Erp\Teams\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -16,6 +16,6 @@ class MyProjects extends Controller
 
     public function index(Request $req)
     {
-        return view("teams::projects.myprojects");
+        return view("jiny-erp-teams::projects.myprojects");
     }
 }
