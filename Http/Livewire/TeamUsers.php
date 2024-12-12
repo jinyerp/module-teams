@@ -69,7 +69,7 @@ class TeamUsers extends Component
 
         // 아바타 이미지
         //$avatas = DB::table('account_avata')->whereIn('user_id',$ids)->get();
-        return view("jiny-module-teams::livewire.users",[
+        return view("module-teams::livewire.users",[
             'users' => $users
         ]);
 

@@ -23,7 +23,7 @@ class MyTeamProjectLists extends Component
 
         $rows = DB::table($this->tablename)->where('user_id', $id)->get();
 
-        return view("jiny-module-teams::myproject.lists",[
+        return view("module-teams::myproject.lists",[
             'rows' => $rows
         ]);
     }

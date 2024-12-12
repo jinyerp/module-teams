@@ -23,7 +23,7 @@ class TeamSidebar extends Component
 
         $rows = DB::table($this->tablename)->where('user_id', $id)->get();
 
-        return view("jiny-module-teams::livewire.sidebar",[
+        return view("module-teams::livewire.sidebar",[
             'rows' => $rows
         ]);
     }

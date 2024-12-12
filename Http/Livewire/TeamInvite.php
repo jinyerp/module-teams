@@ -32,10 +32,10 @@ class TeamInvite extends Component
     public function render()
     {
         if($this->project['user_id'] == $this->user_id) {
-            return view("jiny-module-teams::livewire.invite");
+            return view("module-teams::livewire.invite");
         }
 
-        return view("jiny-module-teams::livewire.none");
+        return view("module-teams::livewire.none");
     }
 
     public function inviteNewMember()

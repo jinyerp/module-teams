@@ -30,7 +30,7 @@ class TeamList extends Component
         }
 
         $rows = $db->get();
-        return view("jiny-module-teams::livewire.list",[
+        return view("module-teams::livewire.list",[
             'rows' => $rows
         ]);
     }

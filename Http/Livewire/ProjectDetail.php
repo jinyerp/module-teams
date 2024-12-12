@@ -24,7 +24,7 @@ class ProjectDetail extends Component
     {
         $row = DB::table($this->tablename)->where('id', $this->project_id)->first();
 
-        return view("jiny-module-teams::livewire.detail",[
+        return view("module-teams::livewire.detail",[
             'row' => $row
         ]);
     }

@@ -16,6 +16,6 @@ class MyProjects extends Controller
 
     public function index(Request $req)
     {
-        return view("jiny-module-teams::projects.myprojects");
+        return view("module-teams::projects.myprojects");
     }
 }

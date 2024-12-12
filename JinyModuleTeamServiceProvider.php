@@ -7,9 +7,9 @@ use Illuminate\View\Compilers\BladeCompiler;
 use Illuminate\Support\Facades\File;
 use Livewire\Livewire;
 
-class JinyModulesTeamServiceProvider extends ServiceProvider
+class JinyModuleTeamServiceProvider extends ServiceProvider
 {
-    private $package = "jiny-module-teams";
+    private $package = "module-teams";
     public function boot()
     {
         // 모듈: 라우트 설정

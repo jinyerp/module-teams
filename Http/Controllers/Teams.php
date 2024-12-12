@@ -15,7 +15,7 @@ class Teams extends SiteController
 
         $this->actions['view']['layout']
             = inSlotView("home.teams",
-                "jiny-module-teams::home.teams.layout");
+                "module-teams::home.teams.layout");
     }
 
     public function index(Request $request)
