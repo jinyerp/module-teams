@@ -1,5 +1,5 @@
 <?php
-namespace Jiny\Erp\Teams\Http\Livewire;
+namespace Jiny\Modules\Teams\Http\Livewire;
 
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Routing\Route;
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 // 테이블 필드를 리스트 목록으로 출력합니다.
 class TeamUsers extends Component
 {
-    private $tablename = "erp_team_users";
+    private $tablename = "module_team_users";
     public $project_id;
     public $project=[];
 
@@ -24,7 +24,7 @@ class TeamUsers extends Component
     {
         $this->user_id = Auth::user()->id;
 
-        $project = DB::table("erp_teams")->where('id', $this->project_id)->first();
+        $project = DB::table("module_teams")->where('id', $this->project_id)->first();
         foreach($project as $key => $value) {
             $this->project[$key] = $value;
         }
@@ -69,7 +69,7 @@ class TeamUsers extends Component
 
         // 아바타 이미지
         //$avatas = DB::table('account_avata')->whereIn('user_id',$ids)->get();
-        return view("jiny-erp-teams::livewire.users",[
+        return view("jiny-module-teams::livewire.users",[
             'users' => $users
         ]);
 
@@ -96,7 +96,7 @@ class TeamUsers extends Component
         //dump($this->project_id);
 
         // 선택한 팀원의 관계정보 읽기
-        $row = DB::table('erp_team_users')
+        $row = DB::table('module_team_users')
             //->where('n_id',$this->project_id)
             //->where('m_id',$id)
             ->where('id',$id)
@@ -124,13 +124,13 @@ class TeamUsers extends Component
     {
         unset($this->forms['id']); // Duplicate key 'PRIMARY'
 
-        DB::table('erp_team_users')
+        DB::table('module_team_users')
             ->where('id',$this->team_id)
             ->update($this->forms);
 
         // owner 수정
         if($this->team_owner) {
-            DB::table('erp_teams')
+            DB::table('module_teams')
             ->where('id',$this->project_id)
             ->update(['user_id'=>$this->forms['m_id']]);
 

@@ -1,27 +1,26 @@
 <?php
-
-namespace Jiny\Erp\Teams\Http\Controllers;
+namespace Jiny\Modules\Teams\Http\Controllers;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class Teams extends Controller
+use Jiny\Site\Http\Controllers\SiteController;
+class Teams extends SiteController
 {
-    private $views = [];
-
     public function __construct()
     {
-        $this->views = config('teams.views');
+        parent::__construct();
+        $this->setVisit($this);
+
+        $this->actions['view']['layout']
+            = inSlotView("home.teams",
+                "jiny-module-teams::home.teams.layout");
     }
 
-    /**
-     * Display a listing of the resource.
-     * @return Renderable
-     */
-    public function index()
+    public function index(Request $request)
     {
-        return view($this->views['home']);
+        return parent::index($request);
     }
 
 }

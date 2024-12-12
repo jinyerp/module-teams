@@ -1,5 +1,5 @@
 {
-    "name": "jiny/erp-teams",
+    "name": "jiny/module-teams",
     "description":"account for JinyShop",
     "type": "library",
     "license": "MIT",
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Jiny\\Erp\\Teams\\":"/"
+            "Jiny\\Modules\\Teams\\":"/"
         },
         "files" : [
             "Helpers/Helper.php"
@@ -23,13 +23,13 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Jiny\\Erp\\Teams\\Tests\\": "tests/"
+            "Jiny\\Modules\\Teams\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Jiny\\Erp\\Teams\\JinyErpTeamServiceProvider"
+                "Jiny\\Modules\\Teams\\JinyModuleTeamServiceProvider"
             ]
         }
     }

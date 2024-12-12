@@ -1,5 +1,5 @@
 <?php
-namespace Jiny\Erp\Teams\Http\Livewire;
+namespace Jiny\Modules\Teams\Http\Livewire;
 
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Routing\Route;
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 // 테이블 필드를 리스트 목록으로 출력합니다.
 class TeamInvite extends Component
 {
-    private $tablename = "erp_team_users";
+    private $tablename = "module_team_users";
     public $project_id;
     public $forms=[];
     public $message;
@@ -23,7 +23,7 @@ class TeamInvite extends Component
     {
         $this->user_id = Auth::user()->id;
 
-        $project = DB::table("erp_teams")->where('id', $this->project_id)->first();
+        $project = DB::table("module_teams")->where('id', $this->project_id)->first();
         foreach($project as $key => $value) {
             $this->project[$key] = $value;
         }
@@ -32,10 +32,10 @@ class TeamInvite extends Component
     public function render()
     {
         if($this->project['user_id'] == $this->user_id) {
-            return view("jiny-erp-teams::livewire.invite");
+            return view("jiny-module-teams::livewire.invite");
         }
 
-        return view("jiny-erp-teams::livewire.none");
+        return view("jiny-module-teams::livewire.none");
     }
 
     public function inviteNewMember()

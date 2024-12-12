@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('erp_team_users', function (Blueprint $table) {
+        Schema::create('module_team_users', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
@@ -50,6 +50,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('erp_team_users');
+        Schema::dropIfExists('module_team_users');
     }
 };

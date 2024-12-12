@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Teams\Database\Seeders;
+namespace Jiny\Modules\Teams\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;

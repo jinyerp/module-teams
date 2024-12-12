@@ -19,8 +19,7 @@
                             Teams
                         </h1>
 
-                        <!-- 내가 가입된 팀목록-->
-                        @livewire('TeamList',['user_id'=>Auth::user()->id])
+                        
 
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 <?php
-namespace Jiny\Erp\Teams\Http\Controllers;
+namespace Jiny\Modules\Teams\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class TeamUsers extends Controller
 {
-    private $tablename = "erp_teams";
+    private $tablename = "module_teams";
     private $views = [];
 
     public function __construct()

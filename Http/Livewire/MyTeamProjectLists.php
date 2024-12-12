@@ -1,5 +1,5 @@
 <?php
-namespace Jiny\Erp\Teams\Http\Livewire;
+namespace Jiny\Modules\Teams\Http\Livewire;
 
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Routing\Route;
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 // 테이블 필드를 리스트 목록으로 출력합니다.
 class MyTeamProjectLists extends Component
 {
-    private $tablename = "erp_teams";
+    private $tablename = "module_teams";
     public $forms=[];
     public $inlineAdd = false;
 
@@ -23,7 +23,7 @@ class MyTeamProjectLists extends Component
 
         $rows = DB::table($this->tablename)->where('user_id', $id)->get();
 
-        return view("jiny-erp-teams::myproject.lists",[
+        return view("jiny-module-teams::myproject.lists",[
             'rows' => $rows
         ]);
     }
